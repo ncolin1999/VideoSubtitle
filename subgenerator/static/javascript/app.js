@@ -57,7 +57,7 @@ form.onsubmit = function (event) {
             downlaodsrt.setAttribute('href', json.download);
             downlaodsrt.classList.remove('d-none');
             video.addEventListener("loadedmetadata", function () {
-               let track = document.createElement("track");
+                let track = document.createElement("track");
                 track.kind = "subtitles";
                 track.label = "English";
                 track.srclang = "en";
@@ -66,11 +66,11 @@ form.onsubmit = function (event) {
                     //by default subtitle is hidden
                     this.mode = "showing"; //both  statements have same meaning but i have written both of them just for browser compatibility
                     //video.textTracks[0].mode = "showing";
-                     video.textTracks[video.textTracks.length-1].mode = "showing";
+                    video.textTracks[video.textTracks.length - 1].mode = "showing";
                 });
-                for(let i=0;i<video.textTracks.length;i++){
-                video.textTracks[i].mode="hidden";
-                                          }
+                for (let i = 0; i < video.textTracks.length; i++) {
+                    video.textTracks[i].mode = "hidden";
+                }
                 this.appendChild(track);
 
 

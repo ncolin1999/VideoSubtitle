@@ -49,8 +49,8 @@ def aws(medialurl, videoname):
 
     )
 
-    f = open("./media/"+videoname+".vtt", "w+")
-    srt = open("./media/"+videoname+".srt", "w+")
+    f = open("./media/" + videoname + ".vtt", "w+")
+    srt = open("./media/" + videoname + ".srt", "w+")
     f.write("WEBVTT\n\n")
     while True:
         status = client.get_transcription_job(TranscriptionJobName=videoname)

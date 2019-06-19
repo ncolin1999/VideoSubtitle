@@ -14,7 +14,8 @@
                 <div class="row p-3 rounded-lg shadow-lg">
                     <div class="col-12">
                         <div class="custom-file">
-                            <input class="custom-file-input" id="customFile" type="file" required name="file" accept="video/*">
+                            <input class="custom-file-input" id="customFile" type="file" required name="file"
+                                   accept="video/*">
                             <label class="custom-file-label" for="customFile">Choose file</label>
                         </div>
                     </div>
@@ -38,16 +39,17 @@
 
         <div id="video" class="col-12 p-2 my-5  shadow-lg rounded-lg text-center">
             <div id="loader" class="d-none">
-            <img   src="{% static 'images/gif.gif' %}">
+                <img src="{% static 'images/gif.gif' %}">
                 <div class="text-info display-3">you can take a cup of coffee ...</div>
             </div>
 
 
-            <video id = "player" class="d-none" height="100%" width="100%"  controls>
+            <video id="player" class="d-none" height="100%" width="100%" controls>
                 <source src=" ">
             </video>
             <div>
-                <a id ="download" href="" download="subtitle.srt" class="d-none btn btn-primary float-right mt-2">Download Subtitle</a>
+                <a id="download" href="" download="subtitle.srt" class="d-none btn btn-primary float-right mt-2">Download
+                    Subtitle</a>
             </div>
         </div>
     </div>

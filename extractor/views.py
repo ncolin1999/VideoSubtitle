@@ -22,7 +22,7 @@ class FileUpload(View):
         fs = FileSystemStorage()
         file = fs.save(p.name, p)
         video = start_recognition(file)
-        #video = getaudio(file, file[:-4] + ".mp3")
+        # video = getaudio(file, file[:-4] + ".mp3")
         '''chunk_size = 65536
         rem = p.size % chunk_size
         num_chunks = p.size / chunk_size
@@ -41,9 +41,9 @@ class FileUpload(View):
                 loading = str(round((i * 100) / num_chunks)) + "%"
                 print(loading)
             print()'''
-        data = {"video": "/media/"+video,
-                "subtitle": "/media/"+video+".vtt",
-                "download": "/media/"+video+".srt"
+        data = {"video": "/media/" + video,
+                "subtitle": "/media/" + video + ".vtt",
+                "download": "/media/" + video + ".srt"
                 }
         return JsonResponse(data)
 
