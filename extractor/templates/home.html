@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Home
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="row align-items-center mt-5  ">
+        <div class="col-12">
+            <form id="form" action="{% url 'home' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="row p-3 rounded-lg shadow-lg">
+                    <div class="col-12">
+                        <div class="custom-file">
+                            <input class="custom-file-input" id="customFile" type="file" required name="file" accept="video/*">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>
+                    </div>
+                    <div class="col-12 pt-3 text-center">
+                        <input type="submit" class="btn btn-lg btn-primary" value="Upload">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div id="bar" class="d-none col-12 mt-5 rounded-lg shadow-lg px-0">
+            <div class="progress ">
+                <div id=progressbar class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                     aria-valuemax="100" style="width: 0"></div>
+            </div>
+            <div id="status" class="text-dark text-center p-1">
+
+            </div>
+
+        </div>
+
+        <div id="video" class="col-12 p-2 my-5  shadow-lg rounded-lg text-center">
+            <div id="loader" class="d-none">
+            <img   src="{% static 'images/gif.gif' %}">
+                <div class="text-info display-3">you can take a cup of coffee ...</div>
+            </div>
+
+
+            <video id = "player" class="d-none" height="100%" width="100%"  controls>
+                <source src=" ">
+            </video>
+            <div>
+                <a id ="download" href="" download="subtitle.srt" class="d-none btn btn-primary float-right mt-2">Download Subtitle</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
