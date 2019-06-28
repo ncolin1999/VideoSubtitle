@@ -88,7 +88,7 @@ def aws(medialurl, videoname):
                     "text": ""})
 
             sublist[counter - 1]['text'] = sublist[counter - 1]['text'] + word['alternatives'][0]['content'] + " "
-            if len(words) - 1 == index:
+            if len(words) == index:
                 sublist[counter - 1]['end'] = word['end_time']
 
     for index, word in enumerate(sublist, start=1):
