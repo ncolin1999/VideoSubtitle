@@ -7,7 +7,7 @@ celery==4.3.0
 certifi==2019.3.9
 chardet==3.0.4
 decorator==4.4.0
-Django==2.2.1
+Django==2.2.10
 django-storages==1.7.1
 docutils==0.14
 get==2019.4.13
