@@ -19,7 +19,7 @@ I have used <b>Ajax(Asynchronous JavaScript and XML)</b> to show the video file 
 <img src = "https://githubimage.s3.ap-south-1.amazonaws.com/loading.png"/>
 <br>
 <br>
-<img src="https://githubimage.s3.ap-south-1.amazonaws.com/video.png" />
+<img src="https://githubimage.s3.ap-south-1.amazonaws.com/video.png" height = 500, width = 500 />
 
 
 
